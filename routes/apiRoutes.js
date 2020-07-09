@@ -21,12 +21,11 @@ module.exports = function (app) {
                     results.password,
                     (error, response) => {
                         if (error) {
-                            res.json(null);
+                            res.json(null)
                         }
                         else if (response) {
                             res.json(results)
-                        }
-                        else {
+                        } else {
                             res.json(null)
                         }
                     }
