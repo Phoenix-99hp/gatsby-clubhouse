@@ -41,6 +41,9 @@ const SignInForm = () => {
                     if (response) {
                         handleLogin(response)
                     }
+                    else {
+                        navigate("/signInError")
+                    }
                 })
                 .catch(error => {
                     navigate("/signInError")
