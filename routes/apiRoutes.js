@@ -65,7 +65,7 @@ module.exports = function (app) {
             title: req.body.title,
             text: req.body.message,
             user: req.body.user._id,
-            timestamp: moment().format('MMMM Do YYYY, h:mm a')
+            timestamp: moment().format('MMMM Do YYYY')
         })
 
         message.save(function (err) {
