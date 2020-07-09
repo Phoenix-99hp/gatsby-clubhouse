@@ -23,7 +23,7 @@ module.exports = function (app) {
                         if (response) {
                             res.json(results)
                         } else {
-                            res.json({ msg: "Incorrect Password" })
+                            res.json(null)
                         }
                     }
                 )
