@@ -1,0 +1,38 @@
+#errorTitle{
+    color: rgb(212, 14, 14);
+    padding-bottom: 20px;
+    display: block;
+    width: 100%;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#errorP {
+    font-size: 18px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+#emoji {
+    font-size: 40px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(0, 140, 255);
+    font-size: 18px;
+}
+
+#containerSmall {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+    flex: 1 1 auto;
+    align-content:baseline;
+}

@@ -1,0 +1,90 @@
+#passwordLabel {
+    padding-left: 15px;
+}
+
+#signInBtn {
+    margin-left: 15px;
+    padding-bottom: 3.5px;
+    padding-top: 3.5px;
+    border: 1px solid black;
+    height: 30px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: rgb(97, 243, 97);
+    cursor: pointer;
+}
+
+#signInBtn:hover {
+    opacity: 0.5;
+}
+
+#signInForm {
+    padding-bottom: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: fit-content;
+    padding-top: 50px;
+    margin-top: 20px;
+}
+
+input {
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 26px;
+    width: 200px;
+    font-size: 18px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid rgb(0, 140, 255);;
+    box-shadow: 0 0 0 0.5px rgb(0, 140, 255);
+}
+
+#signUpLink {
+    padding-top: 20px;
+    font-size: 18px;
+    width: 100%;
+}
+
+.info {
+    padding-right: 10px;
+    font-size: 20px
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(0, 140, 255);
+}
+
+@media screen and (max-width: 800px) {
+    input, label{
+        display: block;
+    }
+    input {
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    label {
+        width: 100%;
+    }
+
+    #passwordLabel, .info {
+        padding: 0px;
+    }
+
+    #signInBtn {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #signInForm {
+        padding-top: 10px;
+        padding-bottom: 0px;
+    }
+}

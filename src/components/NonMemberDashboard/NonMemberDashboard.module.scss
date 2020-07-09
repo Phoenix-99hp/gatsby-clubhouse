@@ -1,0 +1,60 @@
+#firstOption{
+    background-color: greenyellow;
+}
+
+.option {
+    flex: 1 1 100%;
+    max-width: 600px;
+    padding: 5px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#secondOption {
+    margin-top: 10px;
+    background-color: gold;
+}
+
+#thirdOption {
+    margin-top: 10px;
+    background-color: #eb2323;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(0, 140, 255);
+    font-size: 33px;
+}
+
+.linkTwo {
+    text-decoration: none;
+    color: white;
+    font-size: 33px;
+}
+
+#status {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    text-align: left;
+    padding-bottom: 10px;
+    color: #eb2323;
+    max-width: 750px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 1px black;
+  }
+
+  #statusSpan {
+      color: black;
+      text-shadow: none;
+  }
+
+@media screen and (max-width: 520px) {
+    .link, .linkTwo {
+        font-size: 20px;
+    }
+}
