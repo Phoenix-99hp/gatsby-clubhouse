@@ -20,9 +20,13 @@ module.exports = function (app) {
                     req.body.password,
                     results.password,
                     (error, response) => {
-                        if (response) {
+                        if (error) {
+                            res.json(null);
+                        }
+                        else if (response) {
                             res.json(results)
-                        } else {
+                        }
+                        else {
                             res.json(null)
                         }
                     }
