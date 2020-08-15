@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { navigate } from "gatsby"
 import NewPostForm from "../components/NewPostForm"
 import NotFoundPage from "./404"
@@ -8,15 +8,15 @@ import SEO from "../components/SEO"
 
 const NewPost = () => {
 
+    const user = getUser();
+
+    const [post, setPost] = useState({
+        title: "",
+        message: "",
+        user: user,
+    })
+
     if (isLoggedIn()) {
-
-        const user = getUser()
-
-        const [post, setPost] = useState({
-            title: "",
-            message: "",
-            user: user,
-        })
 
         const validate = ({ title, message, user }) => {
             if (title.length > 50 || !title || !message || (!user.isAdmin && !user.isMember)) {
@@ -50,6 +50,7 @@ const NewPost = () => {
         const onChange = e => {
             setPost({ ...post, [e.target.name]: e.target.value })
         }
+
         return (
             <Layout header={"nav"} heading={"New Post"}>
                 <SEO title={"New Post"} />

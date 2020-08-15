@@ -9,29 +9,35 @@ module.exports = function (app) {
     })
 
     app.post("/", (req, res) => {
-        db.User.findOne({ username: req.body.username }).exec((err, results) => {
-            if (err) {
-                res.json({
-                    msg:
-                        "Something went wrong. Make sure the username you entered is valid",
-                })
-            } else {
-                bcrypt.compare(
-                    req.body.password,
-                    results.password,
-                    (error, response) => {
-                        if (error) {
-                            res.json(null)
+        console.log(req.body);
+        db.User.findOne({ username: req.body.username })
+            .exec((err, results) => {
+                if (err) {
+                    res.json({
+                        msg:
+                            "Something went wrong. Make sure the username you entered is valid",
+                    })
+                }
+                else {
+                    bcrypt.compare(
+                        req.body.password,
+                        results.password,
+                        (error, response) => {
+                            if (error) {
+                                console.log(error);
+                                res.json(null);
+                            }
+                            else if (response) {
+                                console.log(response, results);
+                                res.json(results);
+                            }
+                            else {
+                                res.json(null);
+                            }
                         }
-                        else if (response) {
-                            res.json(results)
-                        } else {
-                            res.json(null)
-                        }
-                    }
-                )
-            }
-        })
+                    )
+                }
+            })
     })
 
     app.get("/api/messages", (req, res) => {

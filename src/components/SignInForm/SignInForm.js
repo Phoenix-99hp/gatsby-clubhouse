@@ -10,10 +10,10 @@ const SignInForm = () => {
     })
 
     const onChange = e => {
-        const userInfo = { ...userLogin }
-        const targetName = e.target.name
-        userInfo[targetName] = e.target.value
-        setUserLogin(userInfo)
+        const userInfo = { ...userLogin };
+        const targetName = e.target.name;
+        userInfo[targetName] = e.target.value;
+        setUserLogin(userInfo);
     }
 
     const validate = ({ username, password }) => {
@@ -35,7 +35,7 @@ const SignInForm = () => {
                 body: JSON.stringify(userLogin),
             })
                 .then(res => {
-                    return res.json()
+                    return res.json();
                 })
                 .then(response => {
                     if (response) {
@@ -46,6 +46,7 @@ const SignInForm = () => {
                     }
                 })
                 .catch(error => {
+                    console.log(error);
                     navigate("/signInError")
                 })
         } else {
