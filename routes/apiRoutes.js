@@ -9,7 +9,6 @@ module.exports = function (app) {
     })
 
     app.post("/", (req, res) => {
-        console.log(req.body);
         db.User.findOne({ username: req.body.username })
             .exec((err, results) => {
                 if (err) {
@@ -24,11 +23,9 @@ module.exports = function (app) {
                         results.password,
                         (error, response) => {
                             if (error) {
-                                console.log(error);
                                 res.json(null);
                             }
                             else if (response) {
-                                console.log(response, results);
                                 res.json(results);
                             }
                             else {
