@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import styles from "./AlreadySignedIn.module.scss"
 
 const AlreadySignedIn = ({ user }) => {
-  console.log(user)
+  // console.log(user)
   return (
     <div>
       <h4>

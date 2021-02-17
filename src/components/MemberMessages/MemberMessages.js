@@ -97,7 +97,7 @@ const MemberMessages = () => {
         className={styles.loadBtn}
         onClick={loadMore}
         disabled={
-          !messages || messages.length < 10 || lastMessage ? true : false
+          !messages || messages.length < 11 || lastMessage ? true : false
         }
       >
         Load More
