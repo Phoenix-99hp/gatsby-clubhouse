@@ -72,6 +72,7 @@ input:focus {
 
 #btnContainer {
   display: flex;
+  flex-wrap: nowrap;
 }
 
 @media screen and (max-width: 800px) {
@@ -100,7 +101,7 @@ input:focus {
     // width: 100%;
     margin: 0 auto;
     flex: 1 1 100%;
-    max-width: 70px;
+    max-width: 80px;
   }
 
   #signInForm {
