@@ -131,13 +131,14 @@ const AdminMessages = () => {
               filtered.push(response[i])
             }
           }
-          setLastMessage(true)
+          //   setLastMessage(true)
           const newMsgs = [...state.messages, ...filtered]
           //   setTimeout(() => {
           dispatch({ type: "DONE_FETCHING", payload: newMsgs })
           //   }, 5000)
           //   setMessages(newMsgs)
         } else {
+          setLastMessage(true)
           const newMsgs = [...state.messages, ...response]
           //   setTimeout(() => {
           dispatch({ type: "DONE_FETCHING", payload: newMsgs })
@@ -191,7 +192,7 @@ const AdminMessages = () => {
               onClick={loadMore}
               disabled={
                 !state.messages ||
-                state.messages.length < 11 ||
+                state.messages.length < 10 ||
                 lastMessage ||
                 state.fetching
                   ? true
