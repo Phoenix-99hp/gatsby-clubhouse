@@ -111,7 +111,7 @@ const AdminMessages = () => {
         return res.json()
       })
       .then(response => {
-        console.log("RES:", response)
+        // console.log("RES:", response)
         const idsToDel = []
 
         for (let i = 0; i < response.length; i++) {
