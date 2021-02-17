@@ -15,6 +15,7 @@
   position: relative;
   font-family: "Cabin";
   text-align: left;
+  word-break: break-all;
 
   &:first-of-type {
     margin-top: 0;
