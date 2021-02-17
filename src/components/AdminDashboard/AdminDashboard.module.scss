@@ -1,61 +1,79 @@
-#firstOption{
-    // padding-bottom: 20px;
-    // padding-top: 20px;
-    background-color: greenyellow;
-    margin: 0 auto;
-    margin-bottom: 10px;
+#firstOption {
+  // padding-bottom: 20px;
+  // padding-top: 20px;
+  background-color: greenyellow;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .option {
-    // flex: 1 0 100%;
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    padding: 5px;
-    border: 1.5px solid black;
-    border-radius: 5px;
-    height: 100px;
-    line-height: 100px;
-    text-align: center;
+  font-size: 33px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  padding: 5px;
+  border: 1.5px solid black;
+  border-radius: 5px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-family: "Cabin";
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @media screen and (max-width: 300px) {
+    line-height: normal;
+    height: fit-content;
+  }
+
+  @media screen and (max-width: 230px) {
+    font-size: 20px;
+  }
 }
 
 #thirdOption {
-    margin-top: 10px;
-    background-color:#eb2323;
-    margin: 0 auto;
+  margin-top: 10px;
+  background-color: #eb2323;
+  margin: 0 auto;
 }
 
-.link {
-    text-decoration: none;
-    color: rgb(0, 140, 255);
-    font-size: 33px;
-}
+// .link {
+//   text-decoration: none;
+//   color: rgb(0, 140, 255);
+//   font-size: 33px;
+// }
 
-.linkTwo {
-    text-decoration: none;
-    color: white;
-    font-size: 33px;
-}
+// .linkTwo {
+//   text-decoration: none;
+//   color: white;
+//   font-size: 33px;
+// }
 
 #status {
-    display: block;
-    width: 100%;
-    font-size: 20px;
-    text-align: left;
-    padding-bottom: 10px;
-    color: gold;
-    max-width: 750px;
-    margin: 0 auto;
-    text-shadow: 1px 1px 1px black;
-  }
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  text-align: left;
+  padding-bottom: 10px;
+  color: gold;
+  max-width: 750px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 1px black;
+  font-family: "LibreItalic";
+}
 
-  #statusSpan {
-      color: black;
-      text-shadow: none;
-  }
+#statusSpan {
+  color: black;
+  text-shadow: none;
+  font-family: "Times New Roman", Times, serif;
+}
 
 @media screen and (max-width: 300px) {
-    .link, .linkTwo {
-      font-size: 20px;
-    }
+  .link,
+  .linkTwo {
+    font-size: 20px;
   }
+}

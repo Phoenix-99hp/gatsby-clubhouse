@@ -1,11 +1,41 @@
 h4 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 18px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-family: "Cabin";
+}
+
+#username {
+  font-family: "LibreItalic";
 }
 
 .link {
-    text-decoration: none;
-    color: #008cff;
-    font-size: 18px;
+  text-decoration: none;
+  color: #008cff;
+  font-size: 18px;
+  font-family: "Cabin";
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.admin {
+  color: gold;
+}
+
+.member {
+  color: greenyellow;
+}
+
+.nonMember {
+  color: #eb2323;
+}
+
+.admin,
+.member,
+.nonMember {
+  font-family: "LibreItalic";
+  padding-left: 5px;
+  text-shadow: 1px 1px 1px black;
 }

@@ -3,6 +3,7 @@ import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 import styles from "./Layout.module.scss"
 import NavHeader from "../NavHeader"
+import "../../styles/globalFonts.scss"
 
 const Layout = ({
   header,
@@ -17,10 +18,10 @@ const Layout = ({
       {header === "main" ? (
         <Header heading={heading} subHeading={subHeading} />
       ) : (
-          <NavHeader username={username} status={status} heading={heading} />
-        )}
+        <NavHeader username={username} status={status} heading={heading} />
+      )}
       <main>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

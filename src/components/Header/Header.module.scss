@@ -1,21 +1,32 @@
 #mainHeader {
-    padding-top: 50px;
-    padding-bottom: 40px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  //   min-height: 190px;
 }
 
 #heading {
-    font-size: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  font-size: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Cabin";
+}
+
+#clubhouse {
+  font-size: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "LibreItalic";
 }
 
 #subHeading {
-    width: 100%;
-    font-size: 17px;
+  width: 100%;
+  font-size: 17px;
+  font-family: "Cabin";
 }
 
 @media screen and (max-width: 430px) {
-    #heading {
-        font-size: 40px;
-    }
+  #heading {
+    font-size: 40px;
+  }
 }

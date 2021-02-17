@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import styles from "./AdminDashboard.module.scss"
 
 const AdminDashboard = ({ handleSessionLogout, status }) => {
@@ -9,22 +9,22 @@ const AdminDashboard = ({ handleSessionLogout, status }) => {
         <span id={styles.statusSpan}>Status: </span>
         {status}
       </h2>
-      <div id={styles.firstOption} className={styles.option}>
-        <Link className={styles.link} to="/messages">
-          View Posts
-        </Link>
+      <div
+        id={styles.firstOption}
+        className={styles.option}
+        onClick={() => navigate("/messages")}
+      >
+        View Posts
       </div>
 
-      <div id={styles.thirdOption} className={styles.option}>
-        <Link
-          className={styles.linkTwo}
-          to="/"
-          onClick={() => {
-            handleSessionLogout()
-          }}
-        >
-          Log Out
-        </Link>
+      <div
+        id={styles.thirdOption}
+        className={styles.option}
+        onClick={() => {
+          handleSessionLogout()
+        }}
+      >
+        Log Out
       </div>
     </>
   )

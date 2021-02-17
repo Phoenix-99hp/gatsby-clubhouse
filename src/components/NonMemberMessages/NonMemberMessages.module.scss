@@ -1,46 +1,68 @@
+#nonMember {
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+}
 
-  #nonMember {
-    font-size: 22px;
-    font-weight: bold;
-    padding-bottom: 20px;
-  }
+.messageP {
+  margin-top: 5px;
+}
 
-  .messageP {
-    margin-top: 5px;
-  }
+.timestamp {
+  font-family: "Cabin";
+}
 
-  .message {
-    flex: 1 0 100%;
-    max-width: 450px;
-    border: 1.5px solid black;
-    padding: 5px;
-    margin: 0 auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    background-color: rgb(185, 223, 248);
-    position: relative;
-  }
-
-  .admin, .member {
-    text-shadow: 1px 1px 1px black;
-    font-size: 20px;
-  }
-
-  .admin {
-    color: gold;
-  }
-  
-  .member {
-    color: greenyellow;
-  }
-  
-  #dashSpan {
-    color: black;
-    text-shadow: none;
-  }
-
-.loadBtn {
+.message {
+  flex: 1 0 100%;
+  max-width: 450px;
+  border: 1.5px solid black;
+  padding: 5px;
+  margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: rgb(185, 223, 248);
+  position: relative;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.admin,
+.member {
+  text-shadow: 1px 1px 1px black;
+  font-size: 20px;
+  font-family: "LibreItalic";
+}
+
+.admin {
+  color: gold;
+}
+
+.member {
+  color: greenyellow;
+}
+
+#dashSpan {
+  color: black;
+  text-shadow: none;
+}
+
+.loadBtn {
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 32px;
+}
+
+.last {
+  font-family: "Cabin";
 }

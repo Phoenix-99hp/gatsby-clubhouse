@@ -1,37 +1,56 @@
 h3 {
-    font-size: 22px;
-    font-weight: bold;
-  }
-
-  .messageP {
-    margin-top: 5px;
-  }
-
-  .message {
-    flex: 1 0 100%;
-    max-width: 600px;
-    border: 1.5px solid black;
-    padding: 5px;
-    margin: 0 auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    background-color: rgb(185, 223, 248);
-    position: relative;
-  }
-
-  .abs {
-    position: absolute;
-    right: -60px;
-    color: rgb(247, 101, 101);
-    top: 50%;
-    transform: translateY(-50%);
-    text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "Cabin";
 }
 
-.admin, .member {
+.messageP {
+  margin-top: 5px;
+  font-family: "Cabin";
+  text-align: left;
+}
+
+.message {
+  flex: 1 0 100%;
+  max-width: 500px;
+  border: 1.5px solid black;
+  padding: 5px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: rgb(185, 223, 248);
+  position: relative;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.abs {
+  position: absolute;
+  right: -60px;
+  color: rgb(247, 101, 101);
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: none;
+  font-family: "Cabin";
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.admin,
+.member {
   text-shadow: 1px 1px 1px black;
   font-size: 20px;
+  font-family: "LibreItalic";
+  text-align: center;
 }
 
 .admin {
@@ -50,12 +69,22 @@ h3 {
 .loadBtn {
   margin-top: 20px;
   margin-bottom: 20px;
+  cursor: pointer;
+  height: 32px;
 }
 
-@media screen and (max-width: 500px) {
+.timestamp {
+  text-align: center;
+}
+
+.last {
+  font-family: "Cabin";
+}
+
+@media screen and (max-width: 650px) {
   .abs {
     right: 4px;
-    top: 2px;
+    top: -20px;
     transform: none;
   }
 }

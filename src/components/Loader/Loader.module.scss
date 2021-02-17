@@ -1,0 +1,31 @@
+#loader {
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-bottom: 5px solid red;
+  border-top: 5px solid red;
+  height: 50px;
+  width: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+  //   flex: 1 1 100%;
+}
+
+#text {
+  font-size: 20px;
+  flex: 1 1 100%;
+}
+
+#loaderContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

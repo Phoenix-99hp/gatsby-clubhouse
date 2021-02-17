@@ -6,13 +6,12 @@ import AlreadySignedIn from "../components/AlreadySignedIn"
 import { isLoggedIn, getUser } from "../services/auth"
 
 const IndexPage = () => {
-
   if (isLoggedIn()) {
-    const user = getUser();
+    const user = getUser()
     return (
       <Layout
         header={"main"}
-        heading={"Welcome to the Clubhouse"}
+        heading={"The Clubhouse"}
         subHeading={
           "A place for members to talk about anything...in relative privacy"
         }
@@ -25,7 +24,7 @@ const IndexPage = () => {
     return (
       <Layout
         header={"main"}
-        heading={"Welcome to the Clubhouse"}
+        heading={"The Clubhouse"}
         subHeading={
           "A place for members to talk about anything...in relative privacy"
         }

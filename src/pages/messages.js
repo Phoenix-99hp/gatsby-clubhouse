@@ -9,37 +9,36 @@ import styles from "../styles/messages.module.scss"
 import { isLoggedIn, getUser } from "../services/auth"
 
 const Messages = () => {
+  if (isLoggedIn()) {
+    const user = getUser()
+    const userStatus = user.isAdmin
+      ? "Admin"
+      : user.isMember
+      ? "Member"
+      : "Non-Member"
 
-    if (isLoggedIn()) {
-        const user = getUser();
-        const userStatus = user.isAdmin
-            ? "Admin"
-            : user.isMember
-                ? "Member"
-                : "Non-Member"
-
-        return (
-            <Layout
-                header={"nav"}
-                heading={"Check out these cool messages, "}
-                username={user.username}
-                status={userStatus}
-            >
-                <SEO title="Dashboard" />
-                <div id={styles.containerSmall}>
-                    {user.isAdmin ? (
-                        <AdminMessages />
-                    ) : user.isMember ? (
-                        <MemberMessages />
-                    ) : (
-                                <NonMemberMessages />
-                            )}
-                </div>
-            </Layout>
-        )
-    } else {
-        return NotFoundPage()
-    }
+    return (
+      <Layout
+        header={"nav"}
+        heading={"Check out these cool messages, "}
+        username={user.username}
+        status={userStatus}
+      >
+        <SEO title="Dashboard" />
+        <div id={styles.containerSmall}>
+          {user.isAdmin ? (
+            <AdminMessages />
+          ) : user.isMember ? (
+            <MemberMessages />
+          ) : (
+            <NonMemberMessages />
+          )}
+        </div>
+      </Layout>
+    )
+  } else {
+    return NotFoundPage()
+  }
 }
 
 export default Messages

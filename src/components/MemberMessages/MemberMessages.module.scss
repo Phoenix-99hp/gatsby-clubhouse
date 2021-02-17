@@ -1,39 +1,66 @@
 .messageP {
-    margin-top: 5px;
-  }
+  margin-top: 5px;
+}
 
-  .message {
-    flex: 1 0 100%;
-    max-width: 600px;
-    border: 1.5px solid black;
-    padding: 5px;
-    margin: 0 auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    background-color: rgb(185, 223, 248);
-    position: relative;
-  }
-
-  .admin, .member {
-    text-shadow: 1px 1px 1px black;
-    font-size: 20px;
-  }
-
-  .admin {
-    color: gold;
-  }
-  
-  .member {
-    color: greenyellow;
-  }
-  
-  #dashSpan {
-    color: black;
-    text-shadow: none;
-  }
-
-.loadBtn {
+.message {
+  flex: 1 0 100%;
+  max-width: 500px;
+  border: 1.5px solid black;
+  padding: 5px;
+  margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: rgb(185, 223, 248);
+  position: relative;
+  font-family: "Cabin";
+  text-align: left;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+h3 {
+  text-align: center;
+}
+
+.admin,
+.member {
+  text-shadow: 1px 1px 1px black;
+  font-size: 20px;
+  font-family: "LibreItalic";
+  text-align: center;
+}
+
+.admin {
+  color: gold;
+}
+
+.member {
+  color: greenyellow;
+}
+
+#dashSpan {
+  color: black;
+  text-shadow: none;
+}
+
+.loadBtn {
+  cursor: pointer;
+  height: 32px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.timestamp {
+  text-align: center;
+}
+
+.last {
+  font-family: "Cabin";
 }
